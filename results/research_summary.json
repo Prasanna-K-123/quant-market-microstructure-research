@@ -1,0 +1,55 @@
+{
+  "archives_verified": 28,
+  "bar_interval_seconds": 5,
+  "baseline_protocol": "single-feature OLS fit on train+validation; evaluated once on final test",
+  "cost_grid_one_way_bps": [
+    0,
+    1,
+    2,
+    5,
+    10
+  ],
+  "decile_bootstrap": "1-hour moving blocks; 1000 resamples",
+  "end_date": "2025-01-15",
+  "execution_delay_bars": 1,
+  "headline": {
+    "BTCUSDT": {
+      "mean_gross_log_return_per_trade": -4.973744233924704e-05,
+      "mean_net_log_return_per_trade_at_2bps_one_way": -0.000449737442339247,
+      "strategy_active_trades": 436,
+      "test_30s_directional_accuracy": 0.5071427171719151,
+      "test_30s_pearson_ic": -0.008517407282697934,
+      "test_30s_spearman_ic": 0.00315226934204474,
+      "test_30s_spread_ci_high": 2.3932383276099745e-05,
+      "test_30s_spread_ci_low": -3.848367205788116e-05,
+      "test_30s_top_minus_bottom_return": -6.271914065161089e-06
+    },
+    "ETHUSDT": {
+      "mean_gross_log_return_per_trade": 6.957018471559086e-05,
+      "mean_net_log_return_per_trade_at_2bps_one_way": -0.00033042981528440913,
+      "strategy_active_trades": 799,
+      "test_30s_directional_accuracy": 0.5032960622265436,
+      "test_30s_pearson_ic": 0.007775476773149715,
+      "test_30s_spearman_ic": 0.017906833990453088,
+      "test_30s_spread_ci_high": 0.00012229840154978533,
+      "test_30s_spread_ci_low": -2.2771594403525162e-05,
+      "test_30s_top_minus_bottom_return": 4.929278067910486e-05
+    }
+  },
+  "horizons": [
+    "5s",
+    "15s",
+    "30s"
+  ],
+  "model": "StandardScaler + Ridge; alpha selected on validation Pearson IC",
+  "project": "FLAGSHIP-QR-001",
+  "raw_1s_rows": 2419200,
+  "start_date": "2025-01-02",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "test_days_per_symbol": 3,
+  "train_days_per_symbol": 8,
+  "validation_days_per_symbol": 3
+}
