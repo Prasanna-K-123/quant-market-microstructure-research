@@ -1,8 +1,22 @@
 # Quant Market Microstructure & Execution Research
 
+[![Validation](https://github.com/Prasanna-K-123/quant-market-microstructure-research/actions/workflows/validation.yml/badge.svg?branch=main)](https://github.com/Prasanna-K-123/quant-market-microstructure-research/actions/workflows/validation.yml)
+
 A reproducible short-horizon quantitative-research project testing whether taker-order-flow imbalance and recent market state contain out-of-sample information about subsequent returns after an explicit execution delay, and whether any measured predictability survives baseline challenge, regime checks and transaction-cost sensitivity.
 
 **Reference V1 conclusion:** small, sample-specific short-horizon associations are detectable, but the multivariate model does not clearly dominate simple calibrated baselines and the measured effects are too small or unstable to support a deployable trading-alpha claim.
+
+## Recruiter snapshot
+
+| Signal | Verified evidence |
+|---|---|
+| Data integrity | **2,419,200** official Binance 1-second observations across **28** SHA-256-verified daily archives |
+| Leakage control | chronological **8 train / 3 validation / 3 untouched final-test days** per symbol; signal at `t`, modeled entry at `t+1` |
+| Strongest held-out result | BTCUSDT 5s Ridge Pearson IC **0.02064**, Spearman IC **0.04445**, directional accuracy **52.68%** |
+| Baseline challenge | simple last-5s-return OLS Pearson IC **0.02264** beats the multivariate Ridge **0.02064** |
+| Economic reality | strongest decile spread is only about **0.137 bps** before friction; ETH 30s turns negative at **1 bp one-way** illustrative cost |
+
+**Direct evidence:** [`accepted V1 manifest`](reference/accepted_v1.json) · [`prediction metrics`](results/prediction_metrics.csv) · [`baseline metrics`](results/baseline_metrics.csv) · [`cost sensitivity`](results/strategy_cost_sensitivity.csv) · [`adversarial results audit`](docs/RESULTS_AUDIT.md)
 
 ## Reference research design
 
