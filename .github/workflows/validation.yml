@@ -8,8 +8,11 @@ on:
       - 'src/**'
       - 'tests/**'
       - 'run_research.py'
+      - 'verify_reference.py'
       - 'requirements.txt'
       - 'pyproject.toml'
+      - 'reference/**'
+      - 'results/**'
       - '.github/workflows/validation.yml'
   pull_request:
     branches: [main]
@@ -40,6 +43,9 @@ jobs:
 
       - name: Unit tests
         run: python -m pytest
+
+      - name: Verify committed accepted V1 evidence
+        run: python verify_reference.py
 
       - name: Run frozen reference research
         run: |
