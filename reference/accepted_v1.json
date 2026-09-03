@@ -1,0 +1,40 @@
+{
+  "accepted_artifact_sha256": "009a2aa04483eba721e9e3d0720f379babd8fc1403a86cdcc6e3bcfdfeec407d",
+  "accepted_release_stage_commit": "a9671d477193dadbfa4265ff4f60ff3f7810b6cd",
+  "accepted_release_stage_run_id": 33628144185,
+  "all_ridge_final_test": [
+    {"directional_accuracy": 0.5267967677313345, "horizon": "5s", "n": 51838, "pearson_ic": 0.0206363468825947, "selected_alpha": 100.0, "spearman_ic": 0.0444493612635821, "symbol": "BTCUSDT", "validation_ic": 0.00809396009724},
+    {"directional_accuracy": 0.5194957135653051, "horizon": "15s", "n": 51836, "pearson_ic": 0.0021860370179951, "selected_alpha": 100.0, "spearman_ic": 0.0179799127495344, "symbol": "BTCUSDT", "validation_ic": -0.021310041665595},
+    {"directional_accuracy": 0.5071427171719151, "horizon": "30s", "n": 51833, "pearson_ic": -0.0085174072826979, "selected_alpha": 100.0, "spearman_ic": 0.0031522693420447, "symbol": "BTCUSDT", "validation_ic": -0.0269037374830518},
+    {"directional_accuracy": 0.5057343849925389, "horizon": "5s", "n": 51838, "pearson_ic": 0.0044116637298687, "selected_alpha": 100.0, "spearman_ic": 0.0106538536006805, "symbol": "ETHUSDT", "validation_ic": -0.0086074138821527},
+    {"directional_accuracy": 0.5078803918470532, "horizon": "15s", "n": 51836, "pearson_ic": 0.0095089869491023, "selected_alpha": 0.0, "spearman_ic": 0.0174661083600611, "symbol": "ETHUSDT", "validation_ic": -0.0238701825039022},
+    {"directional_accuracy": 0.5032960622265436, "horizon": "30s", "n": 51833, "pearson_ic": 0.0077754767731497, "selected_alpha": 0.0, "spearman_ic": 0.017906833990453, "symbol": "ETHUSDT", "validation_ic": -0.0224085431734757}
+  ],
+  "btc_5s_baseline_challenge": [
+    {"mae": 0.0001312835181021, "model": "order_imbalance_ols", "pearson_ic": 0.021737132828203, "rmse": 0.0002192578753893, "spearman_ic": 0.0424059083282571},
+    {"mae": 0.0001306563583016, "model": "last_5s_return_ols", "pearson_ic": 0.0226365885886915, "rmse": 0.0002192521210513, "spearman_ic": 0.0443231447681092},
+    {"mae": 0.0001309317253531, "model": "rolling_30s_imbalance_ols", "pearson_ic": 0.0021347420856088, "rmse": 0.0002193210744281, "spearman_ic": 0.0230375687056435}
+  ],
+  "ethusdt_30s_cost_examples": [
+    {"mean_gross_log_return_per_trade": 6.957018471559086e-05, "mean_net_log_return_per_trade": 6.957018471559086e-05, "one_way_cost_bps": 0.0, "round_trip_cost_bps": 0.0, "trades": 799},
+    {"mean_gross_log_return_per_trade": 6.957018471559086e-05, "mean_net_log_return_per_trade": -0.0001304298152844, "one_way_cost_bps": 1.0, "round_trip_cost_bps": 2.0, "trades": 799},
+    {"mean_gross_log_return_per_trade": 6.957018471559086e-05, "mean_net_log_return_per_trade": -0.0003304298152844, "one_way_cost_bps": 2.0, "round_trip_cost_bps": 4.0, "trades": 799}
+  ],
+  "execution_delay_bars": 1,
+  "headline_btcusdt_5s": {"bootstrap_95_ci": [2.2576097318005825e-06, 2.5009982500941428e-05], "directional_accuracy": 0.5267967677313345, "ridge_pearson_ic": 0.0206363468825947, "ridge_spearman_ic": 0.0444493612635821, "top_minus_bottom_decile_spread": 1.3662326337644511e-05},
+  "result_file_sha256": {
+    "results/baseline_metrics.csv": "b8ba9288becd389b72277f6e98a7a505bacfe37cefbecfbdd13f3c9ad8788010",
+    "results/chronological_splits.json": "65488c29af17e87329d208c410b4de910d3c0d2b39632e572058f2a9a7eac045",
+    "results/data_manifest.csv": "17b0b4cd2d0f6fd66dc41072730371dabead1855bb0332c44c3aba2deda89f9c",
+    "results/model_selection.csv": "f1893e5ca8725c606fb8cf1aef963691bb6bd7f1e0b65fa0172b4250311ca698",
+    "results/prediction_deciles.csv": "61dc99d30e65c45252d8e265d34bfd07debdd4f3f55976268bf5d1372180b164",
+    "results/prediction_metrics.csv": "0857c74551aee44622038330e35d926c83de6f1fb074d9225730e19e0719e608",
+    "results/research_summary.json": "a246c340a024ca0e3f8319c04fa6250397b567302741345b39b236dfc2deb143",
+    "results/strategy_cost_sensitivity.csv": "031e7584c7d327ad12f53459ca4b53c625da6b3af070ce8cbf81e929c916ec79",
+    "results/volatility_regime_metrics.csv": "b2993e6756c33d2630d3ddf89f62f6b84f4c7197cea2f2c52b5451532b80741e"
+  },
+  "schema_version": 1,
+  "source_window": {"archives_verified": 28, "end": "2025-01-15", "raw_1s_rows": 2419200, "start": "2025-01-02", "symbols": ["BTCUSDT", "ETHUSDT"]},
+  "split": {"final_test_days": 3, "train_days": 8, "validation_days": 3},
+  "status": "accepted research evidence; no alpha/profitability/deployability claim"
+}
