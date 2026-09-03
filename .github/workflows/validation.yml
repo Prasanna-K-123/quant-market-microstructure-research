@@ -1,3 +1,4 @@
+# Standalone repository validation workflow.
 name: Quant Microstructure Research Validation
 
 on:
